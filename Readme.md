@@ -57,7 +57,7 @@ You can modify the following constants in the script to customize the bot's beha
 
 ## Explanation of the architecture:
 
-![Budget Bot](Architecture.png)
+![Budget Bot](Achitecture.png)
 
 1. User Input: The user interacts with the system through the Chainlit UI.
 2. Chainlit Handler: Manages the chat session and processes user input.
