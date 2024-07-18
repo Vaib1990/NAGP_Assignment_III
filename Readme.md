@@ -71,6 +71,10 @@ You can modify the following constants in the script to customize the bot's beha
 
 The system works by first loading and indexing PDF documents. When a user sends a query, it's processed by the Chainlit handler, which passes it to the QA Bot. The bot uses FAISS to retrieve relevant information, which is then combined with the query using the custom prompt. This is sent to the Llama 2 model, which generates a response. The response is then sent back to the user through the Chainlit UI.
 
+
+# Output 
+
+![Output](Output_Screen.png)
 # Performance Evaluation
 
 1. **Response Time**:
