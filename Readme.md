@@ -55,6 +55,22 @@ You can modify the following constants in the script to customize the bot's beha
 - `EMBED_MODEL_NAME`: Name of the HuggingFace embeddings model
 - `CUSTOM_PROMPT_TEMPLATE`: Customize the prompt template for the LLM
 
+## Explanation of the architecture:
+
+![Budget Bot](Architecture.png)
+
+1. User Input: The user interacts with the system through the Chainlit UI.
+2. Chainlit Handler: Manages the chat session and processes user input.
+3. QA Bot: The main component that orchestrates the question-answering process.
+4. HuggingFace Embeddings: Converts text into vector representations.
+5. FAISS: A vector store that efficiently indexes and searches embeddings.
+6. Llama 2: The language model used for generating responses.
+7. Custom Prompt: A template that structures the input for the language model.
+8. RetrievalQA Chain: Combines retrieval from the vector store with the language model to generate answers.
+9. Document Loader: Loads PDF documents and prepares them for indexing.
+
+The system works by first loading and indexing PDF documents. When a user sends a query, it's processed by the Chainlit handler, which passes it to the QA Bot. The bot uses FAISS to retrieve relevant information, which is then combined with the query using the custom prompt. This is sent to the Llama 2 model, which generates a response. The response is then sent back to the user through the Chainlit UI.
+
 # Performance Evaluation
 
 1. **Response Time**:
