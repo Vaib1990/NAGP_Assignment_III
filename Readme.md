@@ -64,10 +64,10 @@ You can modify the following constants in the script to customize the bot's beha
 
 2. **Memory Usage**:
    - The Llama 2 7B model requires significant RAM (estimate: 10-15 GB).
-   - FAISS vector store memory usage depends on the size of your medical dataset.
+   - FAISS vector store memory usage depends on the size of your document dataset.
 
 3. **Accuracy**:
-   - Accuracy depends on the quality and coverage of the medical data in the vector store.
+   - Accuracy depends on the quality and coverage of the document data in the vector store.
    - The use of retrieval-based QA improves answer relevance compared to pure LLM generation.
 
 4. **Scalability**:
@@ -75,7 +75,7 @@ You can modify the following constants in the script to customize the bot's beha
    - For higher loads, consider distributed setups or API-based LLM services.
 
 5. **Limitations**:
-   - Responses are based on the training data and may not include very recent medical information.
+   - Responses are based on the training data and may not include very recent document information.
    - The system does not have real-time learning capabilities.
 
 To evaluate the performance:
@@ -87,7 +87,7 @@ To evaluate the performance:
    - Response time: The average time taken to generate an answer
    - Relevance: The relevance of retrieved documents to the query
 
-We conducted performance evaluations on the Medical Bot using a test set of 10 queries. Here are the results:
+We conducted performance evaluations on the document Bot using a test set of 10 queries. Here are the results:
 
 1. Response Time:
    - Average: 30 seconds
